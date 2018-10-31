@@ -418,7 +418,7 @@ get_adapter_index(const char* adapter_guid)
   /* not found, dump all adapters */
   printf("%d available adapters:\n", idx);
   for (d = alldevs, idx = 0; d != NULL; d = d->next, idx++) {
-    printf("- %d: %s\n", idx, d->name);
+    printf("- %d: GUID: %s description: %s\n", idx, d->name, d->description);
   }
   pcap_freealldevs(alldevs);
   return -1;
