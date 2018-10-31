@@ -9,10 +9,10 @@
 
 
 /** Define this to the index of the windows network adapter to use */
-#define PACKET_LIB_ADAPTER_NR         1
+//#define PACKET_LIB_ADAPTER_NR         1
 /** Define this to the GUID of the windows network adapter to use
  * or NOT define this if you want PACKET_LIB_ADAPTER_NR to be used */ 
-/*#define PACKET_LIB_ADAPTER_GUID       "00000000-0000-0000-0000-000000000000"*/
+#define PACKET_LIB_ADAPTER_GUID       "61E873C9-13F7-43E7-A215-467129867090" // Realtec USB adapter
 /*#define PACKET_LIB_GET_ADAPTER_NETADDRESS(addr) IP4_ADDR((addr), 192,168,1,0)*/
 /*#define PACKET_LIB_QUIET*/
 
