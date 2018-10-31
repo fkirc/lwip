@@ -35,7 +35,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#ifdef _MSC_VER
+#pragma warning (push, 3)
+#endif
 #include <time.h>
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif
 #include <string.h>
 
 /* lwIP core includes */

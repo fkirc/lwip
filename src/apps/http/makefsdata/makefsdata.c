@@ -14,7 +14,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef _MSC_VER
+#pragma warning (push, 3)
+#endif
 #include <time.h>
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif
 #include <sys/stat.h>
 
 #include "tinydir.h"

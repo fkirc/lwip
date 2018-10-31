@@ -100,7 +100,13 @@
 #endif
 #endif
 
+#ifdef _MSC_VER
+#pragma warning (push, 3)
+#endif
 #include <time.h>
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif
 #endif /* UNUSED */
 
 #include "netif/ppp/ppp_impl.h"

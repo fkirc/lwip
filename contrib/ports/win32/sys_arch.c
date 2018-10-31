@@ -38,10 +38,10 @@
 #pragma warning (push, 3)
 #endif
 #include <windows.h>
+#include <time.h>
 #ifdef _MSC_VER
 #pragma warning (pop)
 #endif
-#include <time.h>
 
 #include <lwip/opt.h>
 #include <lwip/arch.h>

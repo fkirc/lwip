@@ -27,7 +27,13 @@
  *
  */
 
+#ifdef _MSC_VER
+#pragma warning (push, 3)
+#endif
 #include <time.h>
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif
 
 #include "lwip/opt.h"
 #include "lwip/apps/sntp.h"
