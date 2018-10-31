@@ -6,7 +6,9 @@ typedef unsigned int pid_t;
 typedef unsigned int uint32_t;
 
 typedef int ssize_t;
+#if _MSC_VER < 1900
 #define snprintf _snprintf
+#endif
 
 #define HAVE_DECL_STRDUP 1
 #define HAVE_DECL_FILENO 1
