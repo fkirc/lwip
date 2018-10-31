@@ -29,4 +29,4 @@ typedef int ssize_t;
 
 typedef unsigned int clockid_t;
 typedef unsigned int timer_t;
-#define STRUCT_TIMESPEC_DEFINITION_MISSING
+//#define STRUCT_TIMESPEC_DEFINITION_MISSING
