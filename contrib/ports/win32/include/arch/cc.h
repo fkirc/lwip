@@ -71,20 +71,20 @@ typedef int sys_prot_t;
 /* Define (sn)printf formatters for these lwIP types */
 #define X8_F  "02x"
 #define U16_F "hu"
-#define U32_F "lu"
-#define S32_F "ld"
-#define X32_F "lx"
+#define U32_F "zu"
+#define S32_F "zd"
+#define X32_F "zx"
 
 #define S16_F "hd"
 #define X16_F "hx"
-#define SZT_F "lu"
+#define SZT_F "zu"
 #endif /* _MSC_VER */
 
 /* Compiler hints for packing structures */
 #define PACK_STRUCT_USE_INCLUDES
 
 #define LWIP_ERROR(message, expression, handler) do { if (!(expression)) { \
-  LWIP_PLATFORM_DIAG(("Assertion \"%s\" failed at line %d in %s\n", message, __LINE__, __FILE__)); \
+  LWIP_PLATFORM_DIAG(("Assertion \"%s\" failed at line %ld in %s\n", message, __LINE__, __FILE__)); \
   handler;} } while(0)
 
 #ifdef _MSC_VER
