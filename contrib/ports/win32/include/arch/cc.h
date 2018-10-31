@@ -41,7 +41,7 @@
 #endif
 
 #ifdef _MSC_VER
-#if _MSC_VER >= 1910
+#if _MSC_VER >= 1900
 #include <errno.h> /* use MSVC errno for >= 2017 */
 #else
 #define LWIP_PROVIDE_ERRNO /* provide errno for MSVC pre-2017 */
