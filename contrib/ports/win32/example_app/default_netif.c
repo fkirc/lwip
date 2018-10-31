@@ -35,6 +35,9 @@
 #include "lwip/netif.h"
 #include "lwip/ip_addr.h"
 #include "lwip/tcpip.h"
+#ifdef _MSC_VER
+#pragma warning (disable: 4464) /* relative include path contains '..' */
+#endif
 #include "../pcapif.h"
 #include "examples/example_app/default_netif.h"
 
