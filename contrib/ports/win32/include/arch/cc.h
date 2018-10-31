@@ -38,6 +38,8 @@
 #pragma warning (disable: 4103) /* structure packing changed by including file */
 #pragma warning (disable: 4820) /* 'x' bytes padding added after data member 'y' */
 #pragma warning (disable: 4711) /* The compiler performed inlining on the given function, although it was not marked for inlining */
+#pragma warning (disable: 4710) /* The compiler did not perform inlining on a function, although it was marked for inlining */
+#pragma warning (disable: 4820) /* padding inserted after data member */
 #endif
 
 #ifdef _MSC_VER
