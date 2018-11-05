@@ -21,8 +21,8 @@
 /* #define USE_AUTOIP  0 */
 
 /* #define USE_PCAPIF 1 */
-#define LWIP_PORT_INIT_IPADDR(addr)   IP4_ADDR((addr), 192,168,0,250)
-#define LWIP_PORT_INIT_GW(addr)       IP4_ADDR((addr), 192,168,0,1)
+#define LWIP_PORT_INIT_IPADDR(addr)   IP4_ADDR((addr), 192,168,1,250)
+#define LWIP_PORT_INIT_GW(addr)       IP4_ADDR((addr), 192,168,1,1)
 #define LWIP_PORT_INIT_NETMASK(addr)  IP4_ADDR((addr), 255,255,255,0)
 
 /* remember to change this MAC address to suit your needs!
@@ -48,15 +48,15 @@
 
 #define LWIP_CHARGEN_APP              0
 #define LWIP_DNS_APP                  0
-#define LWIP_HTTPD_APP                0
+#define LWIP_HTTPD_APP                1
 /* Set this to 1 to use the netconn http server,
  * otherwise the raw api server will be used. */
-/*#define LWIP_HTTPD_APP_NETCONN     */
+//#define LWIP_HTTPD_APP_NETCONN        1
 #define LWIP_NETBIOS_APP              0
 #define LWIP_NETIO_APP                0
 #define LWIP_MDNS_APP                 0
 #define LWIP_MQTT_APP                 0
-#define LWIP_PING_APP                 1
+#define LWIP_PING_APP                 0
 #define LWIP_RTP_APP                  0
 #define LWIP_SHELL_APP                0
 #define LWIP_SNMP_APP                 0

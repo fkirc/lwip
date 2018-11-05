@@ -182,7 +182,7 @@
 #endif
 
 #if !defined HTTPD_DEBUG || defined __DOXYGEN__
-#define HTTPD_DEBUG         LWIP_DBG_OFF
+#define HTTPD_DEBUG         1
 #endif
 
 /** Set this to 1 to use a memp pool for allocating

@@ -8,7 +8,7 @@
 #if LWIP_NETCONN
 
 #ifndef HTTPD_DEBUG
-#define HTTPD_DEBUG         LWIP_DBG_OFF
+#define HTTPD_DEBUG         1
 #endif
 
 static const char http_html_hdr[] = "HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n";
