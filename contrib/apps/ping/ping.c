@@ -167,7 +167,7 @@ ping_send(int s, const ip_addr_t *addr)
   }
 #endif /* LWIP_IPV6 */
 
-  err = lwip_sendto(s, iecho, ping_size, 0, (struct sockaddr*)&to, sizeof(to));
+  err = (int)lwip_sendto(s, iecho, ping_size, 0, (struct sockaddr*)&to, sizeof(to));
 
   mem_free(iecho);
 
@@ -182,7 +182,7 @@ ping_recv(int s)
   struct sockaddr_storage from;
   int fromlen = sizeof(from);
 
-  while((len = lwip_recvfrom(s, buf, sizeof(buf), 0, (struct sockaddr*)&from, (socklen_t*)&fromlen)) > 0) {
+  while((len = (int)lwip_recvfrom(s, buf, sizeof(buf), 0, (struct sockaddr*)&from, (socklen_t*)&fromlen)) > 0) {
     if (len >= (int)(sizeof(struct ip_hdr)+sizeof(struct icmp_echo_hdr))) {
       ip_addr_t fromaddr;
       memset(&fromaddr, 0, sizeof(fromaddr));

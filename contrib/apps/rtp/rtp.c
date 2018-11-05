@@ -262,7 +262,7 @@ rtp_recv_thread(void *arg)
           /* receive RTP packets */
           while(1) {
             fromlen = sizeof(from);
-            result  = lwip_recvfrom(sock, rtp_recv_packet, sizeof(rtp_recv_packet), 0,
+            result  = (int)lwip_recvfrom(sock, rtp_recv_packet, sizeof(rtp_recv_packet), 0,
               (struct sockaddr *)&from, (socklen_t *)&fromlen);
             if ((result > 0) && ((size_t)result >= sizeof(struct rtp_hdr))) {
               size_t recved = (size_t)result;

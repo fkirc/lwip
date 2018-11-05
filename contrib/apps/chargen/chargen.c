@@ -116,7 +116,7 @@ do_read(struct charcb *p_charcb)
   int readcount;
 
   /* Read some data */
-  readcount = lwip_read(p_charcb->socket, &buffer, 80);
+  readcount = (int)lwip_read(p_charcb->socket, &buffer, 80);
   if (readcount <= 0) {
     close_chargen(p_charcb);
     return -1;
