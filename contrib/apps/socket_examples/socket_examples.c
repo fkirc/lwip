@@ -68,7 +68,7 @@ sockex_nonblocking_connect(void *arg)
 {
 #if LWIP_SOCKET_SELECT
   int s;
-  int ret;
+  ssize_t ret;
   int opt;
 #if LWIP_IPV6
   struct sockaddr_in6 addr;
@@ -324,7 +324,7 @@ static void
 sockex_testrecv(void *arg)
 {
   int s;
-  int ret;
+  ssize_t ret;
   int err;
 #if LWIP_SO_SNDRCVTIMEO_NONSTANDARD
   int opt, opt2;
@@ -533,7 +533,7 @@ sockex_testtwoselects(void *arg)
 {
   int s1;
   int s2;
-  int ret;
+  ssize_t ret;
 #if LWIP_IPV6
   struct sockaddr_in6 addr;
 #else /* LWIP_IPV6 */
