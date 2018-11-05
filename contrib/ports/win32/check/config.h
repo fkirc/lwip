@@ -5,7 +5,7 @@
 typedef unsigned int pid_t;
 typedef unsigned int uint32_t;
 
-typedef int ssize_t;
+typedef signed long long ssize_t;
 #if _MSC_VER < 1900
 #define snprintf _snprintf
 #endif
